@@ -1,0 +1,99 @@
+1) sep="" in print statment      [ print("amit", "gupta", sep="$$")]   # Default is space
+2) end="" in print statement...  [ print("amit", "gupta", end="#")]    # Default is \n
+3) Variables type in python
+4) Operators in python
+5) Type Casting in python
+6) User Input lena..
+7) String Operations
+8) If else in python
+9) match statement in python
+10) Loops in Python:  for in,  while loop
+11) break and continue statement in python
+12) Function in python
+13) List in Python & List methods
+14) Tuple in Python & tuple methods
+15) Set in python
+16) Dict in Python and its Methods ( v in dict,  dict1.update(dict2),  dict1.pop(element) , dict1.popitem() remove last )
+17) Exception handling in python
+18) Global and Local Variables
+19) File handling
+    f.seek(10)    start read after 10th character and then use f.read(no_of_char)
+    f.tell()  give the current position where we are 
+    f.write("hello world")
+    f.truncate(5)    o/p: hello   file size only 5 char hoga. only write 5 char of hello world in file.
+20) Module and pip 
+21) variable scope and DocString
+22) flask,
+23) 
+24) 
+----------------------------------------------------------------------------------------------------------
+
+Model Configuration settings: 
+    temprature 0 and temprature 1 :
+        0 : deterministic
+        1 : creative
+
+    max_tokens:
+        Maximum output length (control the response size )
+
+    timeout:
+        Request timeout ( prevent hanging )
+
+    max_retries:
+        Retry on failure  ( handle transient errors )
+
+use model_kwargs for provider-specific parameters
+
+Using Streaming provides us:
+    immediate feedback
+    Better UX
+    Early Termination
+
+and in traditional approach we have to wait for complete response.
+
+Use .stream() method instead of .invoke() method...
+
+Cost Optimization:
+    1) choose right model
+    2) limit output token (set max_token to control response length and cost )
+    3) use Caching
+
+System msg: define who the AI is 
+User Input: what the user says
+AIMessages: model response (previous AI response )
+Tool Message: Data from tolls/Apis 
+
+
+Chain:
+       chain =  prompt | model | parser
+
+sequentional
+parallel
+passthrough ( keep original) 
+----------------------------------------------------------------------
+
+LLM Examples:
+    chat-gpt-4.o etc
+    claude
+    gemini ( google ka)
+    deepseek
+
+User Prompt ->  goes to -> LangChain -> goes to -> LLM and vise versa for response..
+
+LangChain does: make developemnt moduler
+    1) creating agents
+    2) chat memory
+    3) knowledge integration
+    4) api creation..
+
+LangChain make your developement fast, moduler and scalable.
+
+What type of GenAI app you can create using LangChain:
+Answer: 1) Ask me anything
+        2) 
+
+
+
+
+
+
