@@ -29,7 +29,7 @@ while is_race_on:
             is_race_on = False
             winning_turtle_color = each_turtle.pencolor()
             if winning_turtle_color == user_input:
-                print("You'r turtle is won")
+                print(f"You'r  {user_input} turtle is won")
             else:
                 print(f"Your have lost. The Winner color: {winning_turtle_color} is the winner.")
         rand_dist = random.randint(0,10)
