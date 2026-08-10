@@ -1,0 +1,6 @@
+Controlled and Uncontrolled Component?
+     Both are two ways to manage form input in react.
+     In Conrolled Component React is fully manages the form input values through the component states.
+     In Uncontrolled component, the form inputs manage their own state internally, and React access the value using ref when needed.new line added..new line added..new line added..new line added..
+
+new line added..
