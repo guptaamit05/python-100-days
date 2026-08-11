@@ -30,6 +30,19 @@ def generate_passwrod():
     password_txt.insert(0, password)
 
 
+def search_website():
+    website = website_txt.get()
+    try:
+        with open('./data.json', 'r') as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showerror(title="Error", message="No Data File Found.")        
+    else:
+        if website in data:
+            messagebox.showinfo(title=website, message=f"Website Name: {website}\nPassword: {data[website]['password']}")
+        else:
+            messagebox.showerror(title="Not Exist", message=f"No details for {website} exists.")
+
 def save_to_file():
     website  = website_txt.get()
     email = email_txt.get()
@@ -92,6 +105,12 @@ password_label.grid(column=0, row=3)
 website_txt = tkinter.Entry(width=35)
 website_txt.grid(row=1,column=1, columnspan=2, ipady=4)
 website_txt.focus()
+
+## Search Button
+search_btn = tkinter.Button(text="Search", command=search_website)
+search_btn.grid(row=1, column=3)
+
+
 email_txt = tkinter.Entry(width=35)
 email_txt.grid(row=2,column=1, columnspan=2, ipady=4)
 password_txt = tkinter.Entry(width=35)
