@@ -51,17 +51,21 @@ def save_to_file():
         #     email_txt.delete(0,tkinter.END)
         #     password_txt.delete(0, tkinter.END)
         #     messagebox.showinfo(title="Success", message="Data saved successfully!")
-        with open('./data.json', 'r') as data_file:
-
-            # Reading data from json file...
-            data = json.load(data_file)
+        try:
+            with open('./data.json', 'r') as data_file:
+                # Reading data from json file...
+                data = json.load(data_file)
+               
+        except FileNotFoundError:
+            with open('./data.json', 'w') as data_file:
+                json.dump(json_data, data_file, indent=4)
+        else:   
             # Updating...
             data.update(json_data)
-        
-        with open('./data.json', 'w') as data_file:
-            # Saving updating data..
-            json.dump(data, data_file, indent=4)
-
+            with open('./data.json', 'w') as data_file:
+                # Saving updating data..
+                json.dump(data, data_file, indent=4)
+        finally:    
             messagebox.showinfo(title="Success", message="Data saved successfully!")
             website_txt.delete(0,tkinter.END)
             email_txt.delete(0,tkinter.END)
