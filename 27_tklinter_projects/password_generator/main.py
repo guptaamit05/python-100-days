@@ -3,6 +3,8 @@ from tkinter import messagebox
 from random import shuffle, random, randint,choice
 import string
 
+import json
+
 letters = list(string.ascii_lowercase)
 numbers = list(string.digits)
 symbols = ['!','@','#','$','%','^','&','*','(',')','-','+']
@@ -32,19 +34,38 @@ def save_to_file():
     website  = website_txt.get()
     email = email_txt.get()
     password = password_txt.get()
-    
+    json_data = {website:{
+        "email":email,
+        "password":password
+    }}
     if (len(password) ==0) or (len(email) ==0) or (len(website)==0):
         messagebox.showerror(title="Error", message="Please fill all the details: email, password, and website")
 
+    
     else:            
-        is_ok = messagebox.askokcancel(title="Success", message=f"These are the details: Email:{email}, Passwrod:{password} and Website:{website}. Do you want to save it?")
-        if is_ok:
-            with open('./data.txt', 'a') as f:
-                f.write(f"{website} | {email} | {password}\n")
+        # is_ok = messagebox.askokcancel(title="Success", message=f"These are the details: Email:{email}, Passwrod:{password} and Website:{website}. Do you want to save it?")
+        # if is_ok:
+        #     with open('./data.txt', 'a') as f:
+        #         f.write(f"{website} | {email} | {password}\n")
+        #     website_txt.delete(0,tkinter.END)
+        #     email_txt.delete(0,tkinter.END)
+        #     password_txt.delete(0, tkinter.END)
+        #     messagebox.showinfo(title="Success", message="Data saved successfully!")
+        with open('./data.json', 'r') as data_file:
+
+            # Reading data from json file...
+            data = json.load(data_file)
+            # Updating...
+            data.update(json_data)
+        
+        with open('./data.json', 'w') as data_file:
+            # Saving updating data..
+            json.dump(data, data_file, indent=4)
+
+            messagebox.showinfo(title="Success", message="Data saved successfully!")
             website_txt.delete(0,tkinter.END)
             email_txt.delete(0,tkinter.END)
             password_txt.delete(0, tkinter.END)
-            messagebox.showinfo(title="Success", message="Data saved successfully!")
 
 
 # window.minsize(width=400, height=400)
