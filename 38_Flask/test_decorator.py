@@ -22,5 +22,20 @@ def slow_function():
     i * i
 
 
-fast_function()
-slow_function()
+# fast_function()
+# slow_function()
+
+
+
+
+
+def logging_decorator(fun):
+    def wrapper(*args):
+         fun(*args)
+            
+    return wrapper
+
+def a_function(*args):
+    return sum(args)
+    
+print(a_function(1,2,3))
