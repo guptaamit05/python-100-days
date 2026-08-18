@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Site</title>
+</head>
+<body>
+    <h1>Guess the Gender?</h1>
+    {% for user in data %}
+          <p>{{user}}</p>
+    {% endfor %}
+    <footer class="text-center spacer">
+        <p>
+            <em>No-© Update Your Footer {{year}}
+                <br>Disclaimer: this is neither a vote for nor a vote against content copyrights.
+            </em>
+        </p>
+    </footer>
+</body>
+</html>
