@@ -1,18 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog Site</title>
-</head>
-<body>
-    <h1>Welcome to My Blog {{5*5}} and random number is {{num}}</h1>
-    <footer class="text-center spacer">
-        <p>
-            <em>No-© Update Your Footer {{year}}
-                <br>Disclaimer: this is neither a vote for nor a vote against content copyrights.
-            </em>
-        </p>
-    </footer>
-</body>
-</html>
+
+{% include 'header.html' %}
+
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                 {% for post in posts %}
+
+                  <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{{ url_for('home', id=post.id) }}">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.subtitle}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Amit's G</a>
+                            on {{post_time}}
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+                {% endfor %}
+
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+{% include 'footer.html' %}
+
