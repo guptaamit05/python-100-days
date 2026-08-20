@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="static/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <form method="POST" action="{{url_for('login')}}" novalidate>
+            {{form.csrf_token}}
+            <p>{{form.email.label}}</p>
+            <p class="m-0 p-0">{{form.email(size=30)}}</p>
+            {% if form.email.errors %} {% for error in form.email.errors %}
+            <span class="error">{{ error }}</span>
+            {% endfor %} {% endif %}
+
+            <p>{{form.password.label}}</p>
+            <p class="m-0 p-0">{{form.password(size=30)}}</p>
+            {% if form.password.errors %} {% for error in form.password.errors
+            %}
+            <span class="error">{{ error }}</span>
+            {% endfor %} {% endif %} 
+            
+            <!-- if not valid credentials.. -->
+            {% if error %}
+            <p class="error p-0 m-0">{{ error }}</p>
+            {% endif %}
+            <p>{{ form.submit }}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

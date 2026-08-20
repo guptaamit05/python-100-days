@@ -4,6 +4,14 @@ import datetime, requests
 from dotenv import load_dotenv
 import os
 
+from flask_wtf import FlaskForm
+from wtforms import SubmitField, StringField, PasswordField
+from wtforms.validators import DataRequired
+
+class LoginForm(FlaskForm):
+    email = StringField(label="Email", name='email', validators=[DataRequired("Email field is required!!")])
+    password = PasswordField(label="Password", name='password', validators=[DataRequired("Password is required..")])
+    submit = SubmitField(label='Log In')
 
 
 load_dotenv()
@@ -72,6 +80,17 @@ def contact_us():
     return render_template("contact.html", title="Contact Me", about_me="Have questions? I have answers")
 
 
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    
+    login_form = LoginForm()
+    if login_form.validate_on_submit():
+        if (login_form.email.data == 'admin@admin.com') and (login_form.password.data == '12345'):
+            return redirect(url_for('home'))
+        else:
+            return render_template("login.html", form=login_form, error="Invalid email or password")
+    return render_template("login.html", form=login_form)
 
 if __name__ == "__main__":
     app.run(debug=True)
