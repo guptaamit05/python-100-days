@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-gray-100">
+    <div class="min-h-screen flex flex-col items-center px-4 py-10">
+      <!-- Header -->
+      <div class="w-full max-w-3xl text-center mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">My Library</h1>
+
+        <p class="mt-2 text-gray-500">Your personal collection of books</p>
+      </div>
+
+      <!-- Book List -->
+      <div class="w-full max-w-3xl">
+        <ul class="flex flex-col gap-4">
+          {% if books|length > 0%} {% for book in books %}
+
+          <!-- Book -->
+          <li class="bg-white rounded-xl shadow-md p-5">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+            >
+              <!-- Book Information -->
+              <div>
+                <h2 class="text-xl font-semibold text-gray-800">
+                  {{book.title}}
+                </h2>
+
+                <p class="mt-1 text-gray-500">by {{book.author}}</p>
+              </div>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2">
+                <span class="text-yellow-500 text-lg"> ★ </span>
+
+                <span class="font-semibold text-gray-700"> {{ book.rating }}/ 10 </span>
+              </div>
+            </div>
+          </li>
+          {% endfor %} {% else%}
+          <h2></h2>
+          <h2 class="text-xl text-center font-semibold text-gray-800">
+            No Books in Library found!
+          </h2>
+          {% endif%}
+        </ul>
+      </div>
+
+      <!-- Add Book -->
+      <div class="w-full max-w-3xl mt-6">
+        <a
+          href="{{url_for('add')}}"
+          class="inline-flex w-full sm:w-auto items-center justify-center px-5 py-3 bg-amber-400 text-gray-900 font-semibold rounded-lg hover:bg-amber-500 transition-colors"
+        >
+          + Add New Book
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
