@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from model import Books
 
 def get_all_books(session: Session):
-    return session.scalars(select(Books).order_by(desc(Books.id))).all()
+    return session.scalars(select(Books).order_by(desc(Books.rating))).all()
 
 def get_book_by_id(session: Session, book_id: int):
     return session.get(Books, book_id)

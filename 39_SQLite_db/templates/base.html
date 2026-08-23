@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Book Application{% endblock %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-gray-100">
+    <div class="flex flex-col items-center px-4 py-10">
+      <!-- Heading -->
+      {% block heading %}My Library{% endblock %}
+
+      <main
+        class="w-full max-w-3xl flex flex-col justify-center items-center px-4 py-2"
+      >
+        <!-- The content block is where individual page text will go -->
+        {% block content %} {% endblock %}
+      </main>
+    </div>
+  </body>
+</html>

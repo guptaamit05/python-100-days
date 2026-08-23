@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, NumberRange
 from dotenv import load_dotenv
 import os
 
-from crud import get_all_books,create_book
+from crud import get_all_books,create_book, get_book_by_id, update_book, delete_book
 from db_connect import db
 
 app = Flask(__name__)
@@ -30,6 +30,7 @@ class BookAddForm(FlaskForm):
     book_rating = FloatField(name='book_rating', validators=[DataRequired('Rating is required.' ), NumberRange(min=1, max=10,  message='Rating must be positive (min 1 and max 10).')
 ])
     submit_btn = SubmitField(name='add_book')
+    update_btn = SubmitField(name='update_book')
     
 
 
@@ -41,8 +42,7 @@ def home():
 
 
 @app.route("/add", methods=['GET', 'POST'])
-def add():
-    
+def add():    
     bookForm = BookAddForm()
     if bookForm.validate_on_submit():
         # print(bookForm.book_name.data)
@@ -54,8 +54,34 @@ def add():
         )
         return redirect(url_for('home'))
     
-    return render_template("add.html", form=bookForm)
+    return render_template("add.html", form=bookForm, book=None)
 
+
+@app.route("/edit/<int:id>", methods=['GET','POST'])
+def edit(id):
+    book = get_book_by_id(session=db.session, book_id=id)
+    bookForm = BookAddForm()
+    if bookForm.validate_on_submit():
+        # print(bookForm.book_name.data)
+        update_book(
+            session=db.session,
+            book_id=id,
+            title=bookForm.book_name.data,
+            rating=float(bookForm.book_rating.data),
+            author=bookForm.book_author.data
+        )
+        return redirect(url_for('home'))
+    
+    return render_template("add.html", form=bookForm, book=book)
+
+
+@app.route("/delete/<int:id>")
+def delete(id):
+    find_book = get_book_by_id(session=db.session, book_id=id)
+    if find_book:
+        delete_book(session=db.session, book_id=id)
+        return redirect(url_for("home"))
+    
 
 if __name__ == "__main__":
     connect_db()

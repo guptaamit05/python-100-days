@@ -1,74 +1,70 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Book</title>
+{% extends "base.html" %} {% block title %}Add Book{% endblock %} {% block
+heading %}
+<div class="text-center">
+  <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Add New Book</h1>
+  <p class="mt-2 text-gray-500">Your personal collection of books</p>
+</div>
+{% endblock %} {% block content %}
+<div class="w-full max-w-3xl flex items-center justify-center px-4">
+  <form
+    action="{% if book %}{{ url_for('edit', id=book.id) }}{% else %}{{ url_for('add') }}{% endif %}"
+    method="POST"
+    class="w-full max-w-md flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl shadow-md"
+    novalidate
+  >
+    {{ form.csrf_token}}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-
-  <body class="min-h-screen bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center px-4 py-8">
-      <form
-        action="{{url_for('add')}}"
-        method="POST"
-        class="w-full max-w-md flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-xl shadow-md"
-        novalidate
-      >
-        {{ form.csrf_token}}
-        <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800">
-          Add Book
-        </h1>
-
-        <div class="flex flex-col gap-2">
-          <label for="bookName" class="font-medium text-gray-700">
-            Book Name
-          </label>
-          {{ form.book_name(id="bookName", class="w-full px-4 py-2 border
-          border-gray-300 rounded-lg focus:outline-none focus:ring-2
-          focus:ring-amber-400") }}
-          <p class="p-0 m-0 text-red-600">
-            {% if form.book_name.errors %} {% for error in form.book_name.errors
-            %} {{error}} {% endfor %} {% endif %}
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <label for="bookAuthor" class="font-medium text-gray-700">
-            Book Author
-          </label>
-          {{ form.book_author(id="bookAuthor", class="w-full px-4 py-2 border
-          border-gray-300 rounded-lg focus:outline-none focus:ring-2
-          focus:ring-amber-400") }}
-          <p class="p-0 m-0 text-red-600">
-            {% if form.book_author.errors %} {% for error in
-            form.book_author.errors %} {{error}} {% endfor %} {% endif %}
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <label for="rating" class="font-medium text-gray-700"> Rating </label>
-
-          {{ form.book_rating(type="number", id="rating", class="w-full px-4
-          py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2
-          focus:ring-amber-400") }}
-          <p class="p-0 m-0 text-red-600">
-            {% if form.book_rating.errors %} {% for error in
-            form.book_rating.errors %} {{error}} {% endfor %} {% endif %}
-          </p>
-        </div>
-
-        {{ form.submit_btn(class="w-full py-2.5 px-4 bg-amber-400 text-gray-900
-        font-semibold rounded-lg hover:bg-amber-500 transition-colors")}}
-
-        <a
-          class="pt-2 hover:underline text-blue-700"
-          href="{{url_for('home')}}"
-        >
-          Back</a
-        >
-      </form>
+    <div class="flex flex-col gap-2">
+      <label for="bookName" class="font-medium text-gray-700">
+        Book Name
+      </label>
+      {{ form.book_name(id="bookName", value=book.title, class="w-full px-4 py-2
+      border border-gray-300 rounded-lg focus:outline-none focus:ring-2
+      focus:ring-amber-400") }}
+      <p class="p-0 m-0 text-red-600">
+        {% if form.book_name.errors %} {% for error in form.book_name.errors %}
+        {{error}} {% endfor %} {% endif %}
+      </p>
     </div>
-  </body>
-</html>
+
+    <div class="flex flex-col gap-2">
+      <label for="bookAuthor" class="font-medium text-gray-700">
+        Book Author
+      </label>
+      {{ form.book_author(id="bookAuthor", value=book.author, class="w-full px-4
+      py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2
+      focus:ring-amber-400") }}
+      <p class="p-0 m-0 text-red-600">
+        {% if form.book_author.errors %} {% for error in form.book_author.errors
+        %} {{error}} {% endfor %} {% endif %}
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label for="rating" class="font-medium text-gray-700"> Rating </label>
+
+      {{ form.book_rating(type="number", value=book.rating, id="rating",
+      class="w-full px-4 py-2 border border-gray-300 rounded-lg
+      focus:outline-none focus:ring-2 focus:ring-amber-400") }}
+      <p class="p-0 m-0 text-red-600">
+        {% if form.book_rating.errors %} {% for error in form.book_rating.errors
+        %} {{error}} {% endfor %} {% endif %}
+      </p>
+    </div>
+
+    {% if book %}
+        {{ form.update_btn(class="w-full py-2.5 px-4 bg-amber-400
+        text-gray-900 font-semibold rounded-lg hover:bg-amber-500
+        transition-colors")}} 
+    {%else%}
+        {{ form.submit_btn(class="w-full py-2.5 px-4
+        bg-amber-400 text-gray-900 font-semibold rounded-lg hover:bg-amber-500
+        transition-colors")}}
+     {%endif%}
+
+    <a class="pt-2 hover:underline text-blue-700" href="{{url_for('home')}}">
+      Back</a
+    >
+  </form>
+</div>
+{% endblock %}
