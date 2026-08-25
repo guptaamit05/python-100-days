@@ -22,12 +22,12 @@ from crud import get_user_by_email, create_user
 from model import User
 
 
-app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-
-
 load_dotenv()
 
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+DB_URI = os.getenv("DB_URI")
 
 # Configure Flask-Login's Login Manager
 login_manager = LoginManager()
@@ -39,7 +39,7 @@ def load_user(user_id):
     return db.get_or_404(User, user_id)
 
 
-def connect_db(database_uri="sqlite:///users.db"):
+def connect_db(database_uri=DB_URI):
     """Application factory for easy testing configuration injection."""
     app.config["SQLALCHEMY_DATABASE_URI"] = database_uri
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -48,6 +48,9 @@ def connect_db(database_uri="sqlite:///users.db"):
 
     with app.app_context():
         db.create_all()
+
+
+connect_db()
 
 
 @app.route("/")
@@ -117,5 +120,4 @@ def download():
 
 
 if __name__ == "__main__":
-    connect_db()
     app.run(debug=True)
