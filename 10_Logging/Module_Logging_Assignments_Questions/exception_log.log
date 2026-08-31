@@ -1,0 +1,18 @@
+2026-04-21 12:51:24,593-exception_logger-ERROR-division by zero not performed..-
+Traceback (most recent call last):
+  File "/tmp/ipykernel_420781/1474886684.py", line 15, in log_exception
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
+2026-04-21 13:02:59,459-exception_logger-ERROR-division by zero not performed..-
+Traceback (most recent call last):
+  File "/tmp/ipykernel_420781/1474886684.py", line 15, in log_exception
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
+2026-04-21 13:02:59,459-exception_logger-ERROR-division by zero not performed..-
+Traceback (most recent call last):
+  File "/tmp/ipykernel_420781/1474886684.py", line 15, in log_exception
+    1/0
+    ~^~
+ZeroDivisionError: division by zero

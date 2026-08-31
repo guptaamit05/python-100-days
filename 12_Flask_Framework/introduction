@@ -1,0 +1,20 @@
+
+Flask = WSGI + Jinja2 engine
+
+pip install Flask
+from flask import Flask
+
+app = Flask()  # instace of flask class..
+
+# app = will be your WSGI application.
+
+if __name__ == '__main__':    # entry point of every .py file..
+    app.run()
+
+
+
+{{ }}   expression to print data on html page..
+{% %}  conditional statement..
+{# #}  single line comment
+
+

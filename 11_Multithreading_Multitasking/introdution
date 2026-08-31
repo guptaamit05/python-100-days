@@ -1,0 +1,25 @@
+Prorgram: It is a set of instruction written in any programming language..
+Process: it is an instance of program that is being executed..
+
+Code Segments   Data Segments   Heap
+
+Stack          Registers
+
+Every process has a seprate memory space allocated to it..
+One process can't corrupt to other process..
+
+It require I/O Requirments..
+
+Disadvantage:  
+    1) increase execution time to switch to process to other proess..  ( example Browser, open excel sheet, word file, play movie, vs code are examples of process etc..)
+
+
+Thread:  a thread is a unit of execution within a process
+Types of thread:
+    1) Single thread:  it has its own stack and registers
+    2) Multithread
+
+
+
+
+

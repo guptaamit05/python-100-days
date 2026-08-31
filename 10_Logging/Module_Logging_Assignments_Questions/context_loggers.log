@@ -1,0 +1,15 @@
+2026-04-21 13:04:18,227-contenxt_loggers-DEBUG-This is a debug message-test_context-16-
+2026-04-21 13:04:18,227-contenxt_loggers-INFO-This is an info message-test_context-17-
+2026-04-21 13:04:18,227-contenxt_loggers-WARNING-This is a warning message-test_context-18-
+2026-04-21 13:04:18,229-contenxt_loggers-ERROR-This is an error message-test_context-19-
+2026-04-21 13:04:18,230-contenxt_loggers-CRITICAL-This is a critical message-test_context-20-
+2026-04-21 13:04:27,108-contenxt_loggers-DEBUG-This is a debug message-test_context-16-
+2026-04-21 13:04:27,108-contenxt_loggers-DEBUG-This is a debug message-test_context-16-
+2026-04-21 13:04:27,108-contenxt_loggers-INFO-This is an info message-test_context-17-
+2026-04-21 13:04:27,108-contenxt_loggers-INFO-This is an info message-test_context-17-
+2026-04-21 13:04:27,109-contenxt_loggers-WARNING-This is a warning message-test_context-18-
+2026-04-21 13:04:27,109-contenxt_loggers-WARNING-This is a warning message-test_context-18-
+2026-04-21 13:04:27,110-contenxt_loggers-ERROR-This is an error message-test_context-19-
+2026-04-21 13:04:27,110-contenxt_loggers-ERROR-This is an error message-test_context-19-
+2026-04-21 13:04:27,111-contenxt_loggers-CRITICAL-This is a critical message-test_context-20-
+2026-04-21 13:04:27,111-contenxt_loggers-CRITICAL-This is a critical message-test_context-20-

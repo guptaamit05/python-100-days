@@ -1,0 +1,129 @@
+2026-04-20 22:04:23-test-db-creation-INFO-calling db creation funtion..
+2026-04-20 22:04:23-test-db-creation-INFO-creating db name test.db
+2026-04-20 22:05:16-test-db-creation-INFO-calling db creation funtion..
+2026-04-20 22:05:16-test-db-creation-INFO-creating db name test.db
+2026-04-20 22:05:16-test-db-creation-INFO-DB created successfuly..
+2026-04-20 22:15:31-test-db-creation-INFO-----------------------------------------------
+2026-04-20 22:15:31-test-db-creation-INFO-creating table..
+2026-04-20 22:15:31-test-db-creation-INFO-Table employees is created.
+2026-04-20 22:31:20-test-db-creation-ERROR-Error to insert data: 'list' object has no attribute 'tostring'
+2026-04-20 22:34:07-test-db-creation-INFO-inserting data into table: [('Rajesh', 26, 'IT'), ('Gopal', 29, 'Finance'), ('Harish das', 30, 'CS')]
+2026-04-20 22:34:07-test-db-creation-INFO-inserted successfully..
+2026-04-20 22:48:01-test-db-creation-INFO-getting all info of employees table
+2026-04-20 22:48:01-test-db-creation-INFO-employees table has 3 rows
+2026-04-20 22:48:01-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 05:30:28-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:30:40-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:30:40-test-db-creation-ERROR-unable to fetch data : Incorrect number of bindings supplied. The current statement uses 1, and there are 2 supplied.
+2026-04-21 05:31:08-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:31:08-test-db-creation-ERROR-unable to fetch data : Incorrect number of bindings supplied. The current statement uses 1, and there are 2 supplied.
+2026-04-21 05:31:44-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:31:44-test-db-creation-ERROR-unable to fetch data : no such column: IT
+2026-04-21 05:32:10-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:32:10-test-db-creation-ERROR-unable to fetch data : no such column: IT
+2026-04-21 05:32:30-test-db-creation-INFO-fetching data by department: finance
+2026-04-21 05:32:30-test-db-creation-ERROR-unable to fetch data : no such column: finance
+2026-04-21 05:33:41-test-db-creation-INFO-fetching data by department: finance
+2026-04-21 05:33:41-test-db-creation-ERROR-unable to fetch data : 'str' object has no attribute 'dept'
+2026-04-21 05:33:49-test-db-creation-INFO-fetching data by department: finance
+2026-04-21 05:33:49-test-db-creation-ERROR-unable to fetch data : Incorrect number of bindings supplied. The current statement uses 1, and there are 7 supplied.
+2026-04-21 05:34:16-test-db-creation-INFO-fetching data by department: finance
+2026-04-21 05:34:16-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:34:26-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:34:26-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 05:34:37-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:34:37-test-db-creation-ERROR-unable to fetch data : Incorrect number of bindings supplied. The current statement uses 1, and there are 2 supplied.
+2026-04-21 05:34:42-test-db-creation-INFO-fetching data by department: IT
+2026-04-21 05:34:42-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 05:34:55-test-db-creation-INFO-fetching data by department: CS
+2026-04-21 05:34:55-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 05:41:32-test-db-creation-INFO-updating start for id= 1 and is_delete=False
+2026-04-21 05:41:32-test-db-creation-INFO-data updated successfully total rows:
+2026-04-21 05:42:18-test-db-creation-INFO-updating start for id= 1 and is_delete=True
+2026-04-21 05:42:18-test-db-creation-INFO-data deleted successfully total rows:
+2026-04-21 05:43:19-test-db-creation-INFO-getting all info of employees table
+2026-04-21 05:43:19-test-db-creation-INFO-employees table has 2 rows
+2026-04-21 05:43:19-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 05:49:03-test-db-creation-INFO-inserting data into table emmployees with data: [('Hari', 36, 'IT'), ('Punit', 49, 'Finance'), ('Mangal das', 36, 'CS')]
+2026-04-21 05:49:03-test-db-creation-INFO-inserted successfully..
+2026-04-21 05:49:03-test-db-creation-INFO-inserting data into table emmployees with data: [('Nandu', 16, 'IT'), ('Rajesh patil', 29, 'Finance'), ('Ramdas', 32, 'CIVIL')]
+2026-04-21 05:49:03-test-db-creation-INFO-inserted successfully..
+2026-04-21 05:49:12-test-db-creation-INFO-getting all info of employees table
+2026-04-21 05:49:12-test-db-creation-INFO-employees table has 8 rows
+2026-04-21 05:49:12-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 05:51:24-test-db-creation-INFO-fetching data by department: 32
+2026-04-21 05:51:24-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:52:22-test-db-creation-INFO-fetching data by Age: 32
+2026-04-21 05:52:22-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 05:52:41-test-db-creation-INFO-fetching data by Age: 32
+2026-04-21 05:52:41-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 05:52:47-test-db-creation-INFO-fetching data by Age: 29
+2026-04-21 05:52:47-test-db-creation-INFO-data fetched successfully total rows: 2
+2026-04-21 05:55:23-test-db-creation-INFO-fetching data by Name: hari
+2026-04-21 05:55:23-test-db-creation-ERROR-unable to fetch data : near "%": syntax error
+2026-04-21 05:55:34-test-db-creation-INFO-fetching data by Name: hari
+2026-04-21 05:55:34-test-db-creation-ERROR-unable to fetch data : near "%": syntax error
+2026-04-21 05:55:51-test-db-creation-INFO-fetching data by Name: hari
+2026-04-21 05:55:51-test-db-creation-ERROR-unable to fetch data : near "%": syntax error
+2026-04-21 05:56:15-test-db-creation-INFO-fetching data by Age: 29
+2026-04-21 05:56:15-test-db-creation-INFO-data fetched successfully total rows: 5
+2026-04-21 05:56:53-test-db-creation-INFO-fetching data by Name: hari
+2026-04-21 05:56:53-test-db-creation-INFO-data fetched successfully total rows: 2
+2026-04-21 05:57:00-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 05:57:00-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:57:39-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 05:57:39-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:57:59-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 05:57:59-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:58:36-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 05:58:36-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:58:41-test-db-creation-INFO-fetching data by Name: a
+2026-04-21 05:58:41-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:59:34-test-db-creation-INFO-fetching data by Name: a
+2026-04-21 05:59:34-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 05:59:42-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 05:59:42-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 06:00:09-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 06:00:09-test-db-creation-INFO-data fetched successfully total rows: 0
+2026-04-21 06:00:15-test-db-creation-INFO-fetching data by Name: pu
+2026-04-21 06:00:15-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 06:00:27-test-db-creation-INFO-fetching data by Name: ram
+2026-04-21 06:00:27-test-db-creation-INFO-data fetched successfully total rows: 1
+2026-04-21 06:00:47-test-db-creation-INFO-fetching data by Name: das
+2026-04-21 06:00:47-test-db-creation-INFO-data fetched successfully total rows: 3
+2026-04-21 06:13:41-test-db-creation-INFO-inserting start for many records at once..
+2026-04-21 06:13:41-test-db-creation-INFO-data inserted successfully..
+2026-04-21 06:13:41-test-db-creation-INFO-connection closed..
+2026-04-21 06:13:59-test-db-creation-INFO-inserting start for many records at once..
+2026-04-21 06:13:59-test-db-creation-INFO-data inserted successfully..
+2026-04-21 06:13:59-test-db-creation-INFO-connection closed..
+2026-04-21 06:13:59-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:13:59-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:13:59-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 06:14:15-test-db-creation-INFO-inserting start for many records at once..
+2026-04-21 06:14:15-test-db-creation-ERROR-unable to insert many data : Incorrect number of bindings supplied. The current statement uses 3, and there are 2 supplied.
+2026-04-21 06:14:15-test-db-creation-INFO-connection closed..
+2026-04-21 06:14:15-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:14:15-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:14:15-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 06:14:24-test-db-creation-INFO-inserting start for many records at once..
+2026-04-21 06:14:24-test-db-creation-ERROR-unable to insert many data : Incorrect number of bindings supplied. The current statement uses 3, and there are 2 supplied.
+2026-04-21 06:14:24-test-db-creation-INFO-connection closed..
+2026-04-21 06:14:24-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:14:24-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:14:24-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 06:14:34-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:14:34-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:14:34-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 06:18:05-test-db-creation-INFO-updating start for many records at once..
+2026-04-21 06:18:05-test-db-creation-INFO-data updated successfully..
+2026-04-21 06:18:05-test-db-creation-INFO-connection closed..
+2026-04-21 06:18:05-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:18:05-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:18:05-test-db-creation-INFO-employees data fetched successfully.
+2026-04-21 06:18:58-test-db-creation-INFO-updating start for many records at once..
+2026-04-21 06:18:58-test-db-creation-INFO-data updated successfully..
+2026-04-21 06:18:58-test-db-creation-INFO-connection closed..
+2026-04-21 06:42:19-test-db-creation-INFO-getting all info of employees table
+2026-04-21 06:42:19-test-db-creation-INFO-employees table has 18 rows
+2026-04-21 06:42:19-test-db-creation-INFO-employees data fetched successfully.

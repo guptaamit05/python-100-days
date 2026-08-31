@@ -2,3 +2,87 @@ __pycache__
 .git
 .env
 
+# ==============================================================================
+# Python Bytecode and Cache
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ==============================================================================
+# Virtual Environments (Dependencies)
+# ==============================================================================
+# Standard python environments
+.venv/
+venv/
+env/
+ENV/
+pyenv/
+
+# Pipenv, Poetry, and modern package managers
+.pdm-python
+.pixi/
+# Note: It is generally recommended to KEEP *.lock files (like Poetry.lock, 
+# Pipfile.lock, uv.lock) in version control for applications, but ignore for libraries.
+
+# ==============================================================================
+# Distribution / Packaging / Build Artifacts
+# ==============================================================================
+bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL for Security)
+# ==============================================================================
+.env
+.暗号
+*.env.[local|development|test]
+secrets.toml
+
+# ==============================================================================
+# IDEs, Editors, and OS-specific files
+# ==============================================================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (PyCharm)
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# ==============================================================================
+# Testing & Coverage Reports
+# ==============================================================================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
