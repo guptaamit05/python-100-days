@@ -14,7 +14,7 @@ d gsd fsd f
 """
 this is another multiline comments... using  3 time double quote..
 """
-
+  
 # use of sep statement in print metod..
 print("Hello", "World", "India", sep='@@')
 print("Using slash n here Amit ", "gupta", sep="\n")
@@ -263,4 +263,3 @@ with open('my_file.txt', 'w') as f:
 with open('my_file.txt', 'r') as f:
     t = f.read()
     print(t)
-    

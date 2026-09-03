@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": 1925,
+        "genre": "Classic",
+        "rating": 4.4,
+        "pages": 180,
+        "price": 12.99,
+        "image": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "genre": "Dystopian",
+        "rating": 4.7,
+        "pages": 328,
+        "price": 14.99,
+        "image": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+    },
+    {
+        "id": 3,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "year": 1937,
+        "genre": "Fantasy",
+        "rating": 4.8,
+        "pages": 310,
+        "price": 16.99,
+        "image": "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "year": 1813,
+        "genre": "Romance",
+        "rating": 4.6,
+        "pages": 432,
+        "price": 11.99,
+        "image": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+    },
+    {
+        "id": 5,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "year": 1988,
+        "genre": "Fiction",
+        "rating": 4.5,
+        "pages": 208,
+        "price": 13.99,
+        "image": "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
+    },
+    {
+        "title": "Test Title",
+        "author": "A.B.C",
+        "year": 2026,
+        "genre": "new generg",
+        "rating": 3.0,
+        "pages": 144,
+        "price": 230.0,
+        "image": "http://acb.co./in/string",
+        "id": 6
+    }
+]
