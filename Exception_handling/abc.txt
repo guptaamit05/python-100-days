@@ -1,0 +1,3 @@
+Yes — your expectation is correct: for serve_chai("c"), the else of try/except will run.
+But the important point is: try/except/else does not care whether the code inside try is logically successful.
+It only checks whether an exception was raised.
